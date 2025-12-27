@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PREMIER</title>
+
+<style>
+:root{
+  --bg:#0f0f0f;
+  --card:#1a1a1a;
+  --orange:#ff7a00;
+  --text:#ffffff;
+  --muted:#cccccc;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  direction:rtl;
+}
+
+/* Header */
+header{
+  padding:20px;
+  text-align:center;
+  border-bottom:1px solid #222;
+}
+
+header h1{
+  margin:0;
+  color:var(--orange);
+  letter-spacing:2px;
+}
+
+header p{
+  color:var(--muted);
+  margin-top:8px;
+}
+
+/* Buttons */
+.actions{
+  margin-top:15px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:12px 20px;
+  background:var(--orange);
+  color:#000;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+/* Section */
+section{
+  padding:25px 15px;
+  max-width:1100px;
+  margin:auto;
+}
+
+section h2{
+  color:var(--orange);
+  margin-bottom:15px;
+  text-align:center;
+}
+
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:18px;
+  text-align:center;
+  border:1px solid #222;
+}
+
+.card h3{
+  color:var(--orange);
+  margin-top:0;
+}
+
+.price{
+  font-size:22px;
+  margin:12px 0;
+  font-weight:bold;
+}
+
+.card p{
+  margin:6px 0;
+  color:var(--muted);
+}
+
+.card a{
+  display:block;
+  margin-top:12px;
+  background:var(--orange);
+  color:#000;
+  padding:10px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* Offer */
+.offer{
+  border:2px dashed var(--orange);
+  background:#141414;
+}
+
+/* Footer */
+footer{
+  padding:20px;
+  text-align:center;
+  border-top:1px solid #222;
+}
+
+footer p{
+  margin-bottom:10px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>PREMIER</h1>
+  <p>أقوى باقات اتصالات – إنترنت ومكالمات وميكسات</p>
+
+  <div class="actions">
+    <a class="btn" href="https://wa.me/201500922220">واتساب</a>
+    <a class="btn" href="tel:01500922220">اتصال</a>
+  </div>
+</header>
+
+<!-- Emerald Packages -->
+<section>
+  <h2>💎 باقات اتصالات Emerald</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>20 جيجا</h3>
+      <p>1600 دقيقة • 250 رسالة</p>
+      <p>12 دقيقة دولي</p>
+      <div class="price">250 جنيه</div>
+      <a href="https://wa.me/201500922220">فعّل الآن</a>
+    </div>
+
+    <div class="card">
+      <h3>28 جيجا</h3>
+      <p>1600 دقيقة • 250 رسالة</p>
+      <p>12 دقيقة دولي</p>
+      <div class="price">285 جنيه</div>
+      <a href="https://wa.me/201500922220">فعّل الآن</a>
+    </div>
+
+    <div class="card">
+      <h3>35 جيجا</h3>
+      <p>1600 دقيقة • 250 رسالة</p>
+      <p>12 دقيقة دولي</p>
+      <div class="price">320 جنيه</div>
+      <a href="https://wa.me/201500922220">فعّل الآن</a>
+    </div>
+
+    <div class="card">
+      <h3>40 جيجا</h3>
+      <p>1600 دقيقة • 250 رسالة</p>
+      <p>12 دقيقة دولي</p>
+      <div class="price">360 جنيه</div>
+      <a href="https://wa.me/201500922220">فعّل الآن</a>
+    </div>
+
+    <div class="card">
+      <h3>50 جيجا</h3>
+      <p>1600 دقيقة • 250 رسالة</p>
+      <p>12 دقيقة دولي</p>
+      <div class="price">450 جنيه</div>
+      <a href="https://wa.me/201500922220">فعّل الآن</a>
+    </div>
+  </div>
+</section>
+
+<!-- Mix Offer -->
+<section>
+  <h2>⚡ عروض الميكس</h2>
+
+  <div class="cards">
+    <div class="card offer">
+      <h3>3750 ميكس</h3>
+      <p>المدة: 26 يوم</p>
+      <div class="price">50 جنيه</div>
+      <p>يشترط نظام أهلاً 2.5</p>
+      <a href="https://wa.me/201500922220">اطلب العرض</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>اتصل بينا وفعّل باقتك دلوقتي</p>
+  <strong>01500922220</strong>
+
+  <div class="actions">
+    <a class="btn" href="https://wa.me/201500922220">واتساب</a>
+    <a class="btn" href="tel:01500922220">اتصال</a>
+  </div>
+</footer>
+
+</body>
+</html>
