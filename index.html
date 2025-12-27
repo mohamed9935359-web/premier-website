@@ -3,136 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>PREMIER</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@600;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#0f0f0f;
-  --card:#1a1a1a;
-  --orange:#ff7a00;
-  --text:#ffffff;
-  --muted:#cccccc;
+  --bg1:#000;
+  --bg2:#120000;
+  --red:#ff2a2a;
+  --orange:#ff8c00;
+  --white:#fff;
 }
 
 *{
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family:'Cairo', sans-serif;
 }
 
 body{
   margin:0;
-  background:var(--bg);
-  color:var(--text);
+  background:radial-gradient(circle at top, var(--bg2), var(--bg1));
+  color:var(--white);
   direction:rtl;
+  overflow-x:hidden;
 }
 
-/* Header */
+/* 🔥 Header */
 header{
-  padding:20px;
   text-align:center;
-  border-bottom:1px solid #222;
+  padding:40px 15px;
+  animation:drop 1s ease;
 }
 
 header h1{
-  margin:0;
+  font-family:'Bebas Neue', sans-serif;
+  font-size:60px;
+  letter-spacing:4px;
   color:var(--orange);
-  letter-spacing:2px;
+  text-shadow:0 0 20px rgba(255,140,0,.7);
 }
 
 header p{
-  color:var(--muted);
-  margin-top:8px;
+  opacity:.8;
 }
 
-/* Buttons */
+/* 🔥 Buttons */
 .actions{
-  margin-top:15px;
   display:flex;
-  gap:10px;
   justify-content:center;
-  flex-wrap:wrap;
-}
-
-.btn{
-  padding:12px 20px;
-  background:var(--orange);
-  color:#000;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-}
-
-/* Section */
-section{
-  padding:25px 15px;
-  max-width:1100px;
-  margin:auto;
-}
-
-section h2{
-  color:var(--orange);
-  margin-bottom:15px;
-  text-align:center;
-}
-
-/* Cards */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:15px;
+  margin-top:20px;
+}
+
+.actions a{
+  padding:12px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:900;
+  background:linear-gradient(45deg,var(--red),var(--orange));
+  color:#000;
+  box-shadow:0 0 15px rgba(255,80,0,.6);
+  transition:.3s;
+}
+
+.actions a:hover{
+  transform:scale(1.1);
+}
+
+/* 🔥 Cards */
+.section{
+  padding:30px 15px;
 }
 
 .card{
-  background:var(--card);
-  border-radius:12px;
-  padding:18px;
+  max-width:380px;
+  margin:25px auto;
+  background:rgba(255,255,255,.05);
+  border-radius:18px;
+  padding:25px;
   text-align:center;
-  border:1px solid #222;
+  box-shadow:0 0 30px rgba(255,60,0,.15);
+  animation:fadeUp 1s ease;
 }
 
-.card h3{
+.card h2{
   color:var(--orange);
-  margin-top:0;
 }
 
-.price{
-  font-size:22px;
-  margin:12px 0;
-  font-weight:bold;
+.card .price{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:55px;
+  color:var(--white);
+  animation:pulse 1.5s infinite;
 }
 
-.card p{
-  margin:6px 0;
-  color:var(--muted);
+.card button{
+  margin-top:15px;
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:900;
+  background:linear-gradient(45deg,var(--orange),var(--red));
+  cursor:pointer;
 }
 
-.card a{
-  display:block;
-  margin-top:12px;
-  background:var(--orange);
-  color:#000;
-  padding:10px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
+/* 🔥 Animations */
+@keyframes drop{
+  from{opacity:0; transform:translateY(-50px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
-/* Offer */
-.offer{
-  border:2px dashed var(--orange);
-  background:#141414;
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
-/* Footer */
-footer{
-  padding:20px;
-  text-align:center;
-  border-top:1px solid #222;
-}
-
-footer p{
-  margin-bottom:10px;
-  color:var(--muted);
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+  100%{transform:scale(1);}
 }
 </style>
 </head>
@@ -141,85 +135,24 @@ footer p{
 
 <header>
   <h1>PREMIER</h1>
-  <p>أقوى باقات اتصالات – إنترنت ومكالمات وميكسات</p>
+  <p>أقوى باقات إنترنت ومكالمات</p>
 
   <div class="actions">
-    <a class="btn" href="https://wa.me/201500922220">واتساب</a>
-    <a class="btn" href="tel:01500922220">اتصال</a>
+    <a href="tel:01500922220">اتصال</a>
+    <a href="https://wa.me/201500922220">واتساب</a>
   </div>
 </header>
 
-<!-- Emerald Packages -->
-<section>
-  <h2>💎 باقات اتصالات Emerald</h2>
+<section class="section">
 
-  <div class="cards">
-    <div class="card">
-      <h3>20 جيجا</h3>
-      <p>1600 دقيقة • 250 رسالة</p>
-      <p>12 دقيقة دولي</p>
-      <div class="price">250 جنيه</div>
-      <a href="https://wa.me/201500922220">فعّل الآن</a>
-    </div>
-
-    <div class="card">
-      <h3>28 جيجا</h3>
-      <p>1600 دقيقة • 250 رسالة</p>
-      <p>12 دقيقة دولي</p>
-      <div class="price">285 جنيه</div>
-      <a href="https://wa.me/201500922220">فعّل الآن</a>
-    </div>
-
-    <div class="card">
-      <h3>35 جيجا</h3>
-      <p>1600 دقيقة • 250 رسالة</p>
-      <p>12 دقيقة دولي</p>
-      <div class="price">320 جنيه</div>
-      <a href="https://wa.me/201500922220">فعّل الآن</a>
-    </div>
-
-    <div class="card">
-      <h3>40 جيجا</h3>
-      <p>1600 دقيقة • 250 رسالة</p>
-      <p>12 دقيقة دولي</p>
-      <div class="price">360 جنيه</div>
-      <a href="https://wa.me/201500922220">فعّل الآن</a>
-    </div>
-
-    <div class="card">
-      <h3>50 جيجا</h3>
-      <p>1600 دقيقة • 250 رسالة</p>
-      <p>12 دقيقة دولي</p>
-      <div class="price">450 جنيه</div>
-      <a href="https://wa.me/201500922220">فعّل الآن</a>
-    </div>
+  <div class="card">
+    <h2>باقة Emerald</h2>
+    <p>20 جيجا • 1600 دقيقة</p>
+    <div class="price">250 ج</div>
+    <button>فعّل الآن</button>
   </div>
+
 </section>
-
-<!-- Mix Offer -->
-<section>
-  <h2>⚡ عروض الميكس</h2>
-
-  <div class="cards">
-    <div class="card offer">
-      <h3>3750 ميكس</h3>
-      <p>المدة: 26 يوم</p>
-      <div class="price">50 جنيه</div>
-      <p>يشترط نظام أهلاً 2.5</p>
-      <a href="https://wa.me/201500922220">اطلب العرض</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>اتصل بينا وفعّل باقتك دلوقتي</p>
-  <strong>01500922220</strong>
-
-  <div class="actions">
-    <a class="btn" href="https://wa.me/201500922220">واتساب</a>
-    <a class="btn" href="tel:01500922220">اتصال</a>
-  </div>
-</footer>
 
 </body>
 </html>
